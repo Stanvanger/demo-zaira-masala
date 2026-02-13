@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ===== META BÁSICO ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- ===== SEO OPTIMIZADO ===== -->
+    <title>Zaira Masala | Restaurante Indio Auténtico | Curry, Tandoor y Especias</title>
+    <meta name="description"
+        content="Descubre Zaira Masala, el mejor restaurante indio con auténtico curry, horno tandoor y especias frescas. Opciones veganas y vegetarianas. Menú completo de entrantes, tikka masala, biryani y más. ¡Reserva tu mesa ahora!">
+    <meta name="keywords"
+        content="restaurante indio, curry, tandoor, masala, tikka, biryani, comida india, especias, vegetariano, vegano, naan, korma, vindaloo">
+    <meta name="author" content="Zaira Masala">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zairamasala.com">
+
+    <!-- ===== OPEN GRAPH (Facebook/LinkedIn) ===== -->
+    <meta property="og:title" content="Zaira Masala | Restaurante Indio Auténtico">
+    <meta property="og:description"
+        content="Auténtica cocina india con curry, tandoor y especias frescas. Reserva tu experiencia gastronómica única.">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://zairamasala.com">
+    <meta property="og:image" content="https://zairamasala.com/images/og-image.jpg">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- ===== TWITTER CARDS ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zaira Masala | Restaurante Indio Auténtico">
+    <meta name="twitter:description" content="Auténtica cocina india con curry, tandoor y especias frescas.">
+    <meta name="twitter:image" content="https://zairamasala.com/images/twitter-image.jpg">
+
+    <!-- ===== SCHEMA.ORG (Structured Data) ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Zaira Masala",
+        "description": "Restaurante de auténtica cocina india con curry, tandoor, especias frescas y opciones vegetarianas.",
+        "image": "https://zairamasala.com/images/restaurant.jpg",
+        "priceRange": "€€",
+        "servesCuisine": ["Indian", "Curry", "Vegetarian", "Vegan"],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Tu Dirección",
+            "addressLocality": "Tu Ciudad",
+            "addressCountry": "ES"
+        },
+        "telephone": "+34 XXX XXX XXX",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "12:00",
+                "closes": "23:00"
+            }
+        ],
+        "menu": "https://zairamasala.com/#menu",
+        "acceptsReservations": "True"
+    }
+    </script>
+
+    <!-- ===== FUENTES ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ===== ESTILOS ===== -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional.css">
+
+    <!-- ===== AOS (Animate On Scroll) ===== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+    <!-- ===== LOADING SCREEN ===== -->
+    <div class="loading-screen">
+        <div class="loading-logo">ZAIRA MASALA</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- ===== CURSOR PERSONALIZADO ===== -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- ===== PARTÍCULAS DE FONDO ===== -->
+    <div id="particles-js"></div>
+
+    <!-- ===== CARRITO DE COMPRAS ===== -->
+    <div class="cart-icon" id="cart-icon" aria-label="Ver carrito">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+        </svg>
+        <span class="cart-count hidden" id="cart-count">0</span>
+    </div>
+
+    <!-- Overlay del carrito -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Panel del carrito -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h3>🛒 Tu Pedido</h3>
+            <button class="cart-close" id="cart-close" aria-label="Cerrar carrito">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="cart-empty">
+                <div class="cart-empty-icon">🛒</div>
+                <p>Tu carrito está vacío</p>
+                <p><small>Añade platos desde el menú</small></p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span class="cart-total-label">Total:</span>
+                <span class="cart-total-amount" id="cart-total">0.00 €</span>
+            </div>
+            <a href="#pago" class="btn btn-primary cart-checkout" id="cart-checkout">
+                Proceder al Pago
+            </a>
+        </div>
+    </div>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav class="navbar" role="navigation" aria-label="Navegación principal">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Zaira Masala - Inicio">
+                <img src="images/logo.png" alt="Zaira Masala Logo" class="nav-logo-img">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#menu" class="nav-link">Carta</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#reservas" class="nav-link">Reservas</a></li>
+            </ul>
+
+            <a href="#reservas" class="nav-cta">Reservar Mesa</a>
+
+            <div class="nav-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Auténtica cocina india · Especias · Tradición</p>
+
+            <h1 class="hero-title">
+                <span class="static">ZAIRA</span>
+                <span class="dynamic-wrapper">
+                    <span class="dynamic">MASALA</span>
+                </span>
+            </h1>
+
+            <p class="hero-tagline">
+                Donde cada plato cuenta una historia de <span>sabor</span>,
+                <span>tradición</span> y <span>pasión</span> por la gastronomía india.
+            </p>
+
+            <div class="hero-cta-group">
+                <a href="#menu" class="btn btn-primary" id="btn-ver-carta">Ver Carta</a>
+                <a href="#reservas" class="btn btn-secondary" id="btn-reservar">Reservar Mesa</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Descubre más</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== SECCIÓN MENÚ ===== -->
+    <section id="menu" class="menu-section">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-badge">Nuestra Carta</span>
+            <h2 class="section-title">Descubre Nuestros Platos</h2>
+            <p class="section-description">
+                Desde entrantes crujientes hasta currys aromáticos, cada plato es una celebración
+                de las especias y sabores auténticos de la India.
+            </p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="menu-filters" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter-btn active" data-filter="all" id="filter-all">
+                <span class="icon">🍽️</span> Todos
+            </button>
+            <button class="filter-btn" data-filter="vegetarian" id="filter-vegetarian">
+                <span class="icon">🟡</span> Vegetariano
+            </button>
+            <button class="filter-btn" data-filter="vegan" id="filter-vegan">
+                <span class="icon">🟠</span> Vegano
+            </button>
+            <button class="filter-btn" data-filter="spicy" id="filter-spicy">
+                <span class="icon">🌶️</span> Picante
+            </button>
+        </div>
+
+        <!-- Contenedor del Menú (generado por JS) -->
+        <div id="menu-container" class="menu-container" data-aos="fade-up" data-aos-delay="200">
+            <!-- Las categorías y platos se cargan desde JavaScript -->
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN NOSOTROS ===== -->
+    <section id="nosotros" class="about-section">
+        <div class="about-container">
+            <div class="about-image" data-aos="fade-right">
+                <img src="images/about-chef.png" alt="Chef preparando naan en horno tandoor tradicional" loading="lazy">
+            </div>
+
+            <div class="about-content" data-aos="fade-left">
+                <h2>Una Tradición de Sabor</h2>
+                <p>
+                    En <strong>Zaira Masala</strong>, cada plato es un viaje sensorial a través de siglos
+                    de tradición culinaria india. Nuestros chefs traen consigo recetas familiares
+                    transmitidas de generación en generación.
+                </p>
+                <p>
+                    Utilizamos especias <strong>recién molidas</strong>, ingredientes frescos y técnicas
+                    autóctonas como el <strong>horno tandoor</strong> para crear experiencias gastronómicas
+                    que despiertan todos los sentidos.
+                </p>
+
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="about-feature-icon">🔥</div>
+                        <span>Horno Tandoor</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">🌿</div>
+                        <span>Especias Frescas</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">👨‍🍳</div>
+                        <span>Chefs Expertos</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">🥗</div>
+                        <span>Opciones Veganas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN RESERVAS ===== -->
+    <section id="reservas" class="reservation-section">
+        <div class="reservation-container" data-aos="zoom-in">
+            <h2>¿Listo para Disfrutar?</h2>
+            <p>Reserva tu mesa y déjate llevar por los sabores de la India</p>
+
+            <a href="tel:+34XXXXXXXXX" class="btn btn-primary" id="btn-llamar">
+                📞 Llamar para Reservar
+            </a>
+
+            <div class="reservation-info">
+                <div class="reservation-item">
+                    <div class="icon">📍</div>
+                    <div class="label">Dirección</div>
+                    <div class="value">Tu Calle, Número</div>
+                </div>
+                <div class="reservation-item">
+                    <div class="icon">🕐</div>
+                    <div class="label">Horario</div>
+                    <div class="value">12:00 - 23:00</div>
+                </div>
+                <div class="reservation-item">
+                    <div class="icon">📱</div>
+                    <div class="label">Teléfono</div>
+                    <div class="value">+34 XXX XXX XXX</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN PIDE A DOMICILIO ===== -->
+    <section id="delivery" class="delivery-section">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-badge">🛵 Delivery</span>
+            <h2 class="section-title">Pide a Domicilio</h2>
+            <p class="section-description">
+                Disfruta de nuestros platos en la comodidad de tu hogar
+            </p>
+        </div>
+
+        <div class="delivery-platforms" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://glovoapp.com/es/es/restaurantes/" target="_blank" rel="noopener" class="delivery-btn glovo"
+                id="btn-glovo">
+                <img src="https://res.cloudinary.com/glovoapp/image/fetch/f_auto,h_100,q_auto:low,w_100/https://glovoapp.com/images/logo_circle_green.png"
+                    alt="Glovo">
+                <span>Pedir en Glovo</span>
+            </a>
+            <a href="https://www.ubereats.com/es" target="_blank" rel="noopener" class="delivery-btn uber"
+                id="btn-uber">
+                <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/31ee4bd44e49b88f.svg" alt="Uber Eats">
+                <span>Pedir en Uber Eats</span>
+            </a>
+            <a href="https://www.just-eat.es/" target="_blank" rel="noopener" class="delivery-btn justeat"
+                id="btn-justeat">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Just_Eat_Takeaway_logo.svg/200px-Just_Eat_Takeaway_logo.svg.png"
+                    alt="Just Eat">
+                <span>Pedir en Just Eat</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN RESEÑAS ===== -->
+    <section id="resenas" class="reviews-section">
+        <div class="reviews-container" data-aos="fade-up">
+            <div class="reviews-content">
+                <span class="section-badge">⭐ Opiniones</span>
+                <h2 class="section-title">¿Te Gustó la Experiencia?</h2>
+                <p class="section-description">
+                    Tu opinión nos ayuda a mejorar y a que otros descubran nuestra cocina
+                </p>
+                <a href="https://g.page/r/YOUR_GOOGLE_PLACE_ID/review" target="_blank" rel="noopener"
+                    class="btn btn-google-review" id="btn-google-review">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                        <path
+                            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                        <path
+                            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                        <path
+                            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                    </svg>
+                    Déjanos una Reseña en Google
+                </a>
+            </div>
+
+            <div class="reviews-stars">
+                <div class="star-rating">
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <p class="rating-text">4.8 / 5.0</p>
+                    <p class="rating-count">+250 reseñas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN PAGO ONLINE ===== -->
+    <section id="pago" class="payment-section">
+        <div class="payment-container" data-aos="zoom-in">
+            <span class="section-badge">💳 Pago Seguro</span>
+            <h2 class="section-title">Paga tu Pedido Online</h2>
+            <p class="section-description">
+                Pago seguro con tarjeta de crédito/débito via Stripe
+            </p>
+
+            <div class="payment-form-wrapper">
+                <form id="payment-form" class="payment-form">
+                    <div class="form-group">
+                        <label for="customer-name">Nombre completo</label>
+                        <input type="text" id="customer-name" name="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-email">Email</label>
+                        <input type="email" id="customer-email" name="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="order-amount">Importe (€)</label>
+                        <input type="number" id="order-amount" name="amount" min="1" step="0.01" required
+                            placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-element">Datos de la tarjeta</label>
+                        <div id="card-element" class="card-element">
+                            <!-- Stripe Elements se insertará aquí -->
+                        </div>
+                        <div id="card-errors" class="card-errors" role="alert"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-pay" id="submit-payment">
+                        <span id="button-text">💳 Pagar Ahora</span>
+                        <span id="spinner" class="spinner hidden"></span>
+                    </button>
+                </form>
+
+                <div class="payment-security">
+                    <span>🔒 Pago 100% seguro con SSL</span>
+                    <div class="payment-methods">
+                        <img src="https://cdn.jsdelivr.net/gh/nicholasess/payment-methods-svg@master/svg/visa.svg"
+                            alt="Visa" width="40">
+                        <img src="https://cdn.jsdelivr.net/gh/nicholasess/payment-methods-svg@master/svg/mastercard.svg"
+                            alt="Mastercard" width="40">
+                        <img src="https://cdn.jsdelivr.net/gh/nicholasess/payment-methods-svg@master/svg/amex.svg"
+                            alt="Amex" width="40">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/logo.png" alt="Zaira Masala" class="footer-logo">
+                <p>
+                    Auténtica cocina india elaborada con pasión,
+                    especias frescas y recetas tradicionales.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Instagram">📸</a>
+                    <a href="#" class="social-icon" aria-label="Facebook">👍</a>
+                    <a href="#" class="social-icon" aria-label="TripAdvisor">✈️</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Carta</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Especialidades</h4>
+                <ul>
+                    <li><a href="#menu">Chicken Tikka Masala</a></li>
+                    <li><a href="#menu">Butter Chicken</a></li>
+                    <li><a href="#menu">Lamb Biryani</a></li>
+                    <li><a href="#menu">Naan Bread</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Información</h4>
+                <ul>
+                    <li><a href="#">Alérgenos</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Zaira Masala. Todos los derechos reservados. | Diseñado con 🧡</p>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Script Principal -->
+    <script src="js/main.js"></script>
+
+    <!-- Stripe.js para pagos -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="js/payment.js"></script>
+</body>
+
+</html>
