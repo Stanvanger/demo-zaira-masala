@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- ===== META BÁSICO ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- ===== SEO OPTIMIZADO ===== -->
+  <title>Zaira Masala | Restaurante Indio Auténtico en Arganda del Rey, Madrid</title>
+  <meta name="description"
+    content="Restaurante de cocina india auténtica en Arganda del Rey, Madrid. Curry, tandoor, biryani y opciones veganas. Pide a domicilio o reserva tu mesa online.">
+  <meta name="keywords"
+    content="restaurante indio, curry, tandoor, masala, tikka, biryani, comida india, especias, vegetariano, vegano, naan, korma, vindaloo, Arganda del Rey, Madrid">
+  <meta name="author" content="Zaira Masala">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zairamasala.com">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:title" content="Zaira Masala | Restaurante Indio Auténtico">
+  <meta property="og:description"
+    content="Auténtica cocina india con curry, tandoor y especias frescas. Reserva tu experiencia gastronómica única.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:url" content="https://zairamasala.com">
+  <meta property="og:image" content="https://zairamasala.com/images/og-image.jpg">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- ===== TWITTER CARDS ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zaira Masala | Restaurante Indio Auténtico">
+  <meta name="twitter:description" content="Auténtica cocina india con curry, tandoor y especias frescas.">
+  <meta name="twitter:image" content="https://zairamasala.com/images/twitter-image.jpg">
+
+  <!-- ===== SCHEMA.ORG — Structured Data para SEO e IA ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Zaira Masala",
+    "description": "Restaurante de auténtica cocina india con curry, tandoor, especias frescas y opciones vegetarianas.",
+    "image": "https://zairamasala.com/images/restaurant.jpg",
+    "priceRange": "€€",
+    "servesCuisine": ["Indian", "Curry", "Vegetarian", "Vegan"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Tu Dirección",
+      "addressLocality": "Arganda del Rey",
+      "addressRegion": "Madrid",
+      "addressCountry": "ES"
+    },
+    "telephone": "+34 XXX XXX XXX",
+    "url": "https://zairamasala.com",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "12:00",
+        "closes": "23:00"
+      }
+    ],
+    "menu": "https://zairamasala.com/#menu",
+    "acceptsReservations": "True",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.3015",
+      "longitude": "-3.4402"
+    }
+  }
+  </script>
+
+  <!-- ===== FUENTES ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ===== ESTILOS ===== -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/additional.css">
+
+  <!-- ===== AOS — Animate On Scroll ===== -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loading-screen" role="status" aria-label="Cargando Zaira Masala">
+    <div class="loading-logo" aria-hidden="true">Zaira Masala</div>
+    <div class="loading-bar" aria-hidden="true">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR PERSONALIZADO (decorativo, oculto a lectores de pantalla) ===== -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ===== PARTÍCULAS DE FONDO (decorativo) ===== -->
+  <div id="particles-js" aria-hidden="true"></div>
+
+  <!-- ===== CARRITO DE COMPRAS ===== -->
+  <aside aria-label="Carrito de compras">
+
+    <button class="cart-icon" id="cart-icon" aria-label="Ver carrito de compras" aria-haspopup="dialog" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+      </svg>
+      <span class="cart-count hidden" id="cart-count" aria-live="polite" aria-atomic="true">0</span>
+    </button>
+
+    <!-- Overlay -->
+    <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+
+    <!-- Panel del carrito -->
+    <div class="cart-modal"
+         id="cart-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Tu pedido"
+         aria-hidden="true">
+      <div class="cart-header">
+        <h2 class="cart-header-title">🛒 Tu Pedido</h2>
+        <button class="cart-close" id="cart-close" aria-label="Cerrar carrito">×</button>
+      </div>
+      <div class="cart-items" id="cart-items" aria-live="polite" aria-relevant="additions removals">
+        <div class="cart-empty" role="status">
+          <div class="cart-empty-icon" aria-hidden="true">🛒</div>
+          <p>Tu carrito está vacío</p>
+          <p><small>Añade platos desde el menú</small></p>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span class="cart-total-label">Total:</span>
+          <span class="cart-total-amount" id="cart-total" aria-live="polite">0.00 €</span>
+        </div>
+        <a href="#pago" class="btn btn-primary cart-checkout" id="cart-checkout">
+          Proceder al Pago
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ===== NAVEGACIÓN PRINCIPAL ===== -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-container">
+
+      <a href="#inicio" class="nav-logo" aria-label="Zaira Masala — Ir al inicio">
+        <img src="images/logo.png" alt="Logo Zaira Masala" class="nav-logo-img" width="90" height="90" loading="eager">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li role="listitem"><a href="#inicio"   class="nav-link">Inicio</a></li>
+        <li role="listitem"><a href="#menu"     class="nav-link">Carta</a></li>
+        <li role="listitem"><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li role="listitem"><a href="#reservas" class="nav-link">Reservas</a></li>
+        <li role="listitem" class="nav-gloriafood-item">
+          <span class="glf-button"
+                data-glf-cuid="e7315025-4f17-4dc7-9547-0346be533925"
+                data-glf-ruid="6becb56a-36a3-4607-b53a-5e8693dfc9ef"
+                role="button"
+                tabindex="0"
+                aria-label="Ver el menú completo y hacer un pedido online">
+            Ver el MENÚ y PEDIR
+          </span>
+        </li>
+      </ul>
+
+      <a href="#reservas" class="nav-cta" aria-label="Reservar mesa en Zaira Masala">Reservar Mesa</a>
+
+      <button class="nav-toggle"
+              aria-label="Abrir menú de navegación"
+              aria-expanded="false"
+              aria-controls="nav-links">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <header id="inicio" class="hero" role="banner">
+      <div class="hero-content">
+        <p class="hero-subtitle">Auténtica cocina india · Especias · Tradición</p>
+
+        <h1 class="hero-title">
+          <span class="static">Zaira</span>
+          <span class="dynamic-wrapper">
+            <span class="dynamic" aria-live="polite" aria-atomic="true">Masala</span>
+          </span>
+        </h1>
+
+        <p class="hero-tagline">
+          Donde cada plato cuenta una historia de <span>sabor</span>,
+          <span>tradición</span> y <span>pasión</span> por la gastronomía india.
+        </p>
+
+        <div class="hero-cta-group" role="group" aria-label="Acciones principales">
+          <span class="glf-button btn btn-primary"
+                data-glf-cuid="e7315025-4f17-4dc7-9547-0346be533925"
+                data-glf-ruid="6becb56a-36a3-4607-b53a-5e8693dfc9ef"
+                role="button"
+                tabindex="0"
+                aria-label="Ver el menú completo y hacer un pedido online">
+            Ver el MENÚ y PEDIR
+          </span>
+          <span class="glf-button reservation btn btn-secondary"
+                data-glf-cuid="e7315025-4f17-4dc7-9547-0346be533925"
+                data-glf-ruid="6becb56a-36a3-4607-b53a-5e8693dfc9ef"
+                data-glf-reservation="true"
+                role="button"
+                tabindex="0"
+                aria-label="Reservar mesa en Zaira Masala">
+            Reserva de mesa
+          </span>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Descubre más</span>
+        <div class="mouse"><div class="wheel"></div></div>
+      </div>
+    </header>
+
+    <!-- ===== SECCIÓN MENÚ ===== -->
+    <section id="menu" class="menu-section" aria-labelledby="menu-titulo">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge" aria-hidden="true">Nuestra Carta</span>
+        <h2 id="menu-titulo" class="section-title">Zaira Masala</h2>
+        <p class="section-subtitle">Comida India a domicilio en Arganda del Rey · Madrid</p>
+        <p class="section-description">
+          Desde entrantes crujientes hasta currys aromáticos, cada plato es una celebración
+          de las especias y sabores auténticos de la India.
+        </p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="menu-filters" data-aos="fade-up" data-aos-delay="100" role="group" aria-label="Filtrar platos por tipo">
+        <button class="filter-btn active" data-filter="all"        aria-pressed="true"  aria-label="Mostrar todos los platos"><span aria-hidden="true">🍽️</span> Todos</button>
+        <button class="filter-btn"        data-filter="vegetarian" aria-pressed="false" aria-label="Filtrar platos vegetarianos"><span aria-hidden="true">🟡</span> Vegetariano</button>
+        <button class="filter-btn"        data-filter="vegan"      aria-pressed="false" aria-label="Filtrar platos veganos"><span aria-hidden="true">🟠</span> Vegano</button>
+        <button class="filter-btn"        data-filter="spicy"      aria-pressed="false" aria-label="Filtrar platos picantes"><span aria-hidden="true">🌶️</span> Picante</button>
+      </div>
+
+      <!-- Menú generado por JS desde menu.json -->
+      <div id="menu-container"
+           class="menu-container"
+           data-aos="fade-up"
+           data-aos-delay="200"
+           aria-live="polite"
+           aria-label="Lista de platos">
+        <p class="menu-loading" role="status" aria-live="polite">Cargando carta...</p>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN NOSOTROS ===== -->
+    <section id="nosotros" class="about-section" aria-labelledby="nosotros-titulo">
+      <div class="about-container">
+
+        <figure class="about-image" data-aos="fade-right">
+          <img src="images/about-chef.png"
+               alt="Chef preparando naan en horno tandoor tradicional en Zaira Masala"
+               loading="lazy"
+               width="500"
+               height="500">
+        </figure>
+
+        <article class="about-content" data-aos="fade-left">
+          <h2 id="nosotros-titulo">ZAIRA MASALA: Una Tradición de Sabor en Arganda del Rey</h2>
+          <p>
+            En <strong>Zaira Masala</strong>, cada plato es un viaje sensorial a través de siglos
+            de tradición culinaria india, ahora disponible en <strong>Madrid</strong>. Nuestros chefs traen
+            consigo recetas familiares transmitidas de generación en generación.
+          </p>
+          <p>
+            Utilizamos especias <strong>recién molidas</strong>, ingredientes frescos y técnicas
+            autóctonas como el <strong>horno tandoor</strong> para crear experiencias gastronómicas
+            que despiertan todos los sentidos.
+          </p>
+
+          <ul class="about-features" aria-label="Nuestros valores">
+            <li class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">🔥</span>
+              <span>Horno Tandoor</span>
+            </li>
+            <li class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">🌿</span>
+              <span>Especias Frescas</span>
+            </li>
+            <li class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">👨‍🍳</span>
+              <span>Chefs Expertos</span>
+            </li>
+            <li class="about-feature">
+              <span class="about-feature-icon" aria-hidden="true">🥗</span>
+              <span>Opciones Veganas</span>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN RESERVAS ===== -->
+    <section id="reservas" class="reservation-section" aria-labelledby="reservas-titulo">
+      <div class="reservation-container" data-aos="zoom-in">
+        <h2 id="reservas-titulo">ZAIRA MASALA: ¿Listo para Disfrutar en Arganda del Rey?</h2>
+        <p>Reserva tu mesa y déjate llevar por los sabores de la India</p>
+
+        <div class="footer-cta" role="group" aria-label="Opciones de pedido y reserva">
+          <span class="glf-button btn btn-primary"
+                data-glf-cuid="e7315025-4f17-4dc7-9547-0346be533925"
+                data-glf-ruid="6becb56a-36a3-4607-b53a-5e8693dfc9ef"
+                role="button"
+                tabindex="0"
+                aria-label="Ver menú y hacer un pedido online">
+            Ver el MENÚ y PEDIR
+          </span>
+          <span class="glf-button reservation btn btn-secondary"
+                data-glf-cuid="e7315025-4f17-4dc7-9547-0346be533925"
+                data-glf-ruid="6becb56a-36a3-4607-b53a-5e8693dfc9ef"
+                data-glf-reservation="true"
+                role="button"
+                tabindex="0"
+                aria-label="Hacer una reserva de mesa">
+            Reserva de mesa
+          </span>
+        </div>
+
+        <address class="reservation-info" aria-label="Información de contacto y horarios">
+          <div class="reservation-item">
+            <span class="icon" aria-hidden="true">📍</span>
+            <span class="label">Dirección</span>
+            <span class="value">Tu Calle, Número, Arganda del Rey</span>
+          </div>
+          <div class="reservation-item">
+            <span class="icon" aria-hidden="true">🕐</span>
+            <span class="label">Horario</span>
+            <span class="value">
+              <time datetime="12:00">12:00</time> – <time datetime="23:00">23:00</time>
+            </span>
+          </div>
+          <div class="reservation-item">
+            <span class="icon" aria-hidden="true">📱</span>
+            <span class="label">Teléfono</span>
+            <span class="value">
+              <a href="tel:+34XXXXXXXXX" aria-label="Llamar al restaurante">+34 XXX XXX XXX</a>
+            </span>
+          </div>
+        </address>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN DELIVERY ===== -->
+    <section id="delivery" class="delivery-section" aria-labelledby="delivery-titulo">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge" aria-hidden="true">🛵 Delivery</span>
+        <h2 id="delivery-titulo" class="section-title">Pide a Domicilio</h2>
+        <p class="section-description">
+          Disfruta de nuestros platos en la comodidad de tu hogar
+        </p>
+      </div>
+
+      <ul class="delivery-platforms" data-aos="fade-up" data-aos-delay="100" aria-label="Plataformas de delivery disponibles" role="list">
+        <li role="listitem">
+          <a href="https://glovoapp.com/es/es/restaurantes/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="delivery-btn glovo"
+             aria-label="Pedir en Glovo (abre en nueva pestaña)">
+            <img src="https://res.cloudinary.com/glovoapp/image/fetch/f_auto,h_100,q_auto:low,w_100/https://glovoapp.com/images/logo_circle_green.png"
+                 alt="Logo Glovo" width="60" height="60" loading="lazy">
+            <span>Pedir en Glovo</span>
+          </a>
+        </li>
+        <li role="listitem">
+          <a href="https://www.ubereats.com/es"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="delivery-btn uber"
+             aria-label="Pedir en Uber Eats (abre en nueva pestaña)">
+            <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/31ee4bd44e49b88f.svg"
+                 alt="Logo Uber Eats" width="60" height="60" loading="lazy">
+            <span>Pedir en Uber Eats</span>
+          </a>
+        </li>
+        <li role="listitem">
+          <a href="https://www.just-eat.es/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="delivery-btn justeat"
+             aria-label="Pedir en Just Eat (abre en nueva pestaña)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Just_Eat_Takeaway_logo.svg/200px-Just_Eat_Takeaway_logo.svg.png"
+                 alt="Logo Just Eat" width="60" height="60" loading="lazy">
+            <span>Pedir en Just Eat</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== SECCIÓN RESEÑAS ===== -->
+    <section id="resenas" class="reviews-section" aria-labelledby="resenas-titulo">
+      <div class="reviews-container" data-aos="fade-up">
+
+        <div class="reviews-content">
+          <span class="section-badge" aria-hidden="true">⭐ Opiniones</span>
+          <h2 id="resenas-titulo" class="section-title">¿Te Gustó la Experiencia?</h2>
+          <p class="section-description">
+            Tu opinión nos ayuda a mejorar y a que otros descubran nuestra cocina
+          </p>
+          <a href="https://g.page/r/CdJRZ85MDGzVEAE/review"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-google-review"
+             aria-label="Dejar una reseña en Google (abre en nueva pestaña)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Déjanos una Reseña en Google
+          </a>
+        </div>
+
+        <div class="reviews-stars">
+          <div class="star-rating" role="img" aria-label="Puntuación media: 4.8 sobre 5 basada en más de 250 reseñas">
+            <span aria-hidden="true">⭐⭐⭐⭐⭐</span>
+            <p class="rating-text">4.8 / 5.0</p>
+            <p class="rating-count">+250 reseñas</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN PAGO ONLINE ===== -->
+    <section id="pago" class="payment-section" aria-labelledby="pago-titulo">
+      <div class="payment-container" data-aos="zoom-in">
+        <span class="section-badge" aria-hidden="true">💳 Pago Seguro</span>
+        <h2 id="pago-titulo" class="section-title">Zaira Masala: Paga tu Pedido Online</h2>
+        <p class="section-description">Pago seguro con tarjeta de crédito/débito via Stripe</p>
+
+        <div class="payment-form-wrapper">
+          <form id="payment-form" class="payment-form" novalidate aria-label="Formulario de pago con tarjeta">
+            <div class="form-group">
+              <label for="customer-name">Nombre completo</label>
+              <input type="text"
+                     id="customer-name"
+                     name="name"
+                     required
+                     autocomplete="name"
+                     placeholder="Tu nombre"
+                     aria-required="true"
+                     aria-describedby="name-hint">
+              <span id="name-hint" class="sr-only">Introduce tu nombre completo como aparece en la tarjeta</span>
+            </div>
+            <div class="form-group">
+              <label for="customer-email">Email</label>
+              <input type="email"
+                     id="customer-email"
+                     name="email"
+                     required
+                     autocomplete="email"
+                     placeholder="tu@email.com"
+                     aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="order-amount">Importe (€)</label>
+              <input type="number"
+                     id="order-amount"
+                     name="amount"
+                     min="1"
+                     step="0.01"
+                     required
+                     placeholder="0.00"
+                     aria-required="true"
+                     aria-describedby="amount-hint">
+              <span id="amount-hint" class="sr-only">El importe se rellena automáticamente desde el carrito</span>
+            </div>
+            <div class="form-group">
+              <label for="card-element">Datos de la tarjeta</label>
+              <div id="card-element" class="card-element" role="group" aria-label="Formulario de tarjeta de crédito de Stripe"></div>
+              <div id="card-errors" class="card-errors" role="alert" aria-live="assertive"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-pay" id="submit-payment" aria-label="Confirmar y pagar ahora">
+              <span id="button-text">💳 Pagar Ahora</span>
+              <span id="spinner" class="spinner hidden" aria-hidden="true"></span>
+            </button>
+          </form>
+
+          <div class="payment-security" aria-label="Información de seguridad del pago">
+            <span>🔒 Pago 100% seguro con SSL</span>
+            <ul class="payment-methods" aria-label="Métodos de pago aceptados" role="list">
+              <li role="listitem"><img src="https://cdn.jsdelivr.net/gh/nicholasess/payment-methods-svg@master/svg/visa.svg"       alt="Visa"       width="40" loading="lazy"></li>
+              <li role="listitem"><img src="https://cdn.jsdelivr.net/gh/nicholasess/payment-methods-svg@master/svg/mastercard.svg" alt="Mastercard" width="40" loading="lazy"></li>
+              <li role="listitem"><img src="https://cdn.jsdelivr.net/gh/nicholasess/payment-methods-svg@master/svg/amex.svg"       alt="American Express" width="40" loading="lazy"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo" aria-label="Pie de página de Zaira Masala">
+    <div class="footer-container">
+
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Logo Zaira Masala" class="footer-logo" width="75" height="75" loading="lazy">
+        <p><strong>Zaira Masala</strong> — Auténtica cocina india en Arganda del Rey, Madrid.</p>
+
+        <nav aria-label="Redes sociales">
+          <ul class="footer-social" role="list">
+            <li role="listitem">
+              <a href="https://www.facebook.com/ZAIRAMASALA"
+                 class="social-icon"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Síguenos en Facebook (abre en nueva pestaña)">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer-cta" role="group" aria-label="Acciones rápidas">
+          <span class="glf-button btn btn-primary"
+                data-glf-cuid="e7315025-4f17-4dc7-9547-0346be533925"
+                data-glf-ruid="6becb56a-36a3-4607-b53a-5e8693dfc9ef"
+                role="button"
+                tabindex="0"
+                aria-label="Ver el menú y hacer un pedido">
+            Ver el MENÚ y PEDIR
+          </span>
+          <span class="glf-button reservation btn btn-secondary"
+                data-glf-cuid="e7315025-4f17-4dc7-9547-0346be533925"
+                data-glf-ruid="6becb56a-36a3-4607-b53a-5e8693dfc9ef"
+                data-glf-reservation="true"
+                role="button"
+                tabindex="0"
+                aria-label="Reservar una mesa">
+            Reserva de mesa
+          </span>
+        </div>
+      </div>
+
+      <nav class="footer-links" aria-label="Navegación del sitio">
+        <h3>Navegación</h3>
+        <ul role="list">
+          <li role="listitem"><a href="#inicio">Inicio</a></li>
+          <li role="listitem"><a href="#menu">Carta</a></li>
+          <li role="listitem"><a href="#nosotros">Nosotros</a></li>
+          <li role="listitem"><a href="#reservas">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-links" aria-label="Especialidades de la carta">
+        <h3>Especialidades</h3>
+        <ul role="list">
+          <li role="listitem"><a href="#menu">Chicken Tikka Masala</a></li>
+          <li role="listitem"><a href="#menu">Butter Chicken</a></li>
+          <li role="listitem"><a href="#menu">Lamb Biryani</a></li>
+          <li role="listitem"><a href="#menu">Naan Bread</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-links" aria-label="Información adicional">
+        <h3>Información</h3>
+        <ul role="list">
+          <li role="listitem"><a href="#">Alérgenos</a></li>
+          <li role="listitem"><a href="#delivery">Delivery</a></li>
+          <li role="listitem"><a href="#">Eventos</a></li>
+          <li role="listitem"><a href="#reservas">Contacto</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        <small>© <time datetime="2024">2024</time> Zaira Masala. Todos los derechos reservados. | Diseñado por luxia 🧡</small>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Texto solo para lectores de pantalla -->
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="js/payment.js"></script>
+
+  <!-- Gloria Food — NO modificar estos atributos -->
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async id="glf-ewm-script"></script>
+
+</body>
+</html>
