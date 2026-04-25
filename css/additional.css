@@ -556,11 +556,12 @@
 
 /* ===== RESPONSIVE ADICIONAL ===== */
 
-/* Tablet (iPad y similares) */
+    /* Tablet (iPad y similares) */
 @media (max-width: 1024px) {
     .reviews-container {
         grid-template-columns: 1fr;
         gap: var(--space-xl);
+        padding: var(--space-xl);
     }
 
     .reviews-content {
@@ -570,10 +571,13 @@
     .reviews-content .section-title,
     .reviews-content .section-description {
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .cart-modal {
-        width: 350px;
+        width: 100%;
+        max-width: 400px;
     }
 }
 
@@ -644,6 +648,7 @@
     .reviews-container {
         padding: var(--space-lg);
         border-radius: 20px;
+        margin: 0 var(--space-md);
     }
 
     .star-rating {
