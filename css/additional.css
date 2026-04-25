@@ -5,11 +5,15 @@
 
 /* ===== LOGO EN NAVBAR ===== */
 .nav-logo-img {
-    height: 90px;
+    height: 70px; /* Reducido para mejor equilibrio */
     width: auto;
-    /* Invertir colores: logo negro → blanco para fondo oscuro */
-    filter: brightness(0) invert(1);
+    filter: invert(1); /* Solo invertir colores, sin brightness(0) que creaba el cuadro blanco */
     transition: var(--transition-normal);
+}
+@media (max-width: 768px) {
+    .nav-logo-img {
+        height: 55px; /* Más compacto en móviles */
+    }
 }
 
 .nav-logo:hover .nav-logo-img {
