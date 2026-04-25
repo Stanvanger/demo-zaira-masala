@@ -7,7 +7,8 @@
 .nav-logo-img {
     height: 70px; /* Reducido para mejor equilibrio */
     width: auto;
-    filter: invert(1); /* Solo invertir colores, sin brightness(0) que creaba el cuadro blanco */
+    filter: invert(1); 
+    mix-blend-mode: screen; /* Clave para ocultar fondos blancos en logos */
     transition: var(--transition-normal);
 }
 @media (max-width: 768px) {
