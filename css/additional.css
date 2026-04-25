@@ -18,7 +18,7 @@
 
 .nav-logo:hover .nav-logo-img {
     transform: scale(1.05);
-    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255, 153, 51, 0.5));
+    filter: invert(1) drop-shadow(0 0 10px rgba(255, 153, 51, 0.5));
 }
 
 /* ===== LOGO EN FOOTER ===== */
@@ -26,7 +26,7 @@
     height: 75px;
     width: auto;
     /* Logo blanco para fondo oscuro */
-    filter: brightness(0) invert(1);
+    filter: invert(1);
     margin-bottom: var(--space-md);
 }
 

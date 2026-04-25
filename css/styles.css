@@ -138,6 +138,7 @@ body {
     z-index: 1000;
     padding: var(--space-md) var(--space-xl);
     background: rgba(10, 10, 10, 0.8);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(212, 164, 55, 0.1);
     transition: var(--transition-normal);
@@ -1054,7 +1055,7 @@ body {
 
     .hero {
         padding: var(--space-2xl) var(--space-lg);
-        min-height: auto;
+        min-height: initial;
         padding-top: 150px; /* Espacio para el navbar fijo en móvil */
     }
 
