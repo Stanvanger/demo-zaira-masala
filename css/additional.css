@@ -5,8 +5,10 @@
 
 /* ===== LOGO EN NAVBAR ===== */
 .nav-logo-img {
-    height: 70px; /* Reducido para mejor equilibrio */
+    height: 70px; 
     width: auto;
+    filter: brightness(0) invert(1); /* Fuerza a blanco */
+    mix-blend-mode: lighten; /* Elimina negros residuales y suaviza bordes */
     transition: var(--transition-normal);
 }
 @media (max-width: 768px) {
