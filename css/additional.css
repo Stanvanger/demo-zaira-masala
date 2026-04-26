@@ -7,8 +7,6 @@
 .nav-logo-img {
     height: 70px; /* Reducido para mejor equilibrio */
     width: auto;
-    filter: invert(1); 
-    mix-blend-mode: screen; /* Clave para ocultar fondos blancos en logos */
     transition: var(--transition-normal);
 }
 @media (max-width: 768px) {
@@ -19,15 +17,12 @@
 
 .nav-logo:hover .nav-logo-img {
     transform: scale(1.05);
-    filter: invert(1) drop-shadow(0 0 10px rgba(255, 153, 51, 0.5));
 }
 
 /* ===== LOGO EN FOOTER ===== */
 .footer-logo {
     height: 75px;
     width: auto;
-    /* Logo blanco para fondo oscuro */
-    filter: invert(1);
     margin-bottom: var(--space-md);
 }
 
